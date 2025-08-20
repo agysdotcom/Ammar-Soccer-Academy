@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Partners - Ammar Soccer Academy</title>
+<style>
+  /* Reset & base */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #000;
+  }
+
+  /* Header */
+  header {
+    background: #000;
+    color: #E39719;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  header .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  header .logo img {
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  header .logo span {
+    vertical-align: middle;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  nav a {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #E39719;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  nav a:hover {
+    color: #E39719;
+    text-decoration: none;
+  }
+
+  /* Dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropbtn {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #E39719;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    right: 0;
+  }
+  .dropdown-content a {
+    color: #E39719;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    font-size: 0.97rem;
+  }
+  .dropdown-content a:hover {
+    background-color: #333;
+    color: #fffde7;
+  }
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 30px 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #000;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+    width: fit-content;
+  }
+
+  /* Grid: fixed 2 columns */
+  .sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .sponsor-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255,215,0,0.15);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .sponsor-card:hover {
+    box-shadow: 0 0 30px rgba(255,215,0,0.3);
+  }
+  .sponsor-logo {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+    display: block;
+  }
+  .sponsor-desc {
+    font-size: 1rem;
+    color: #333;
+    padding: 12px 15px;
+  }
+  .cta-box {
+    margin: 60px auto 20px auto;
+    background: #E39719;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 22px;
+    max-width: 600px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+  .cta-box:hover {
+    background: #E39719;
+    color: #fff;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #111;
+    color: #E39719;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    margin-top: 60px;
+  }
+
+  /* Responsive Nav */
+  @media(max-width: 768px) {
+    nav a, .dropbtn {
+      margin-left: 15px;
+      font-size: 0.95rem;
+    }
+    /* Optional: Change to 1 column on small screens */
+    /*
+    .sponsors-grid {
+      grid-template-columns: 1fr;
+    }
+    */
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="Images/logo.png" alt="Ammar Soccer Academy logo" />
+    <span><img src="Images/ASAW.png" alt="A.S.A emblem" /></span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="team.html">Team</a>
+    <a href="fixtures.html">Fixtures &amp; Results</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <div class="dropdown">
+      <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">More &#9662;</a>
+      <div class="dropdown-content" role="menu" aria-label="More navigation links">
+        <a href="partners.html" role="menuitem">Partners</a>
+        <a href="about.html" role="menuitem">About</a>
+        <a href="honours.html" role="menuitem">Honours</a>
+        <a href="contact.html" role="menuitem">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <h1>Our Partners</h1>
+  <div class="sponsors-grid" role="list">
+    <div class="sponsor-card" tabindex="0" role="listitem" aria-label="K-Electrical sponsor">
+      <img class="sponsor-logo" src="images/PKEC2.png" alt="K-Electrical logo" />
+      <p class="sponsor-desc">Your Electrical solution.</p>
+    </div>
+    <div class="sponsor-card" tabindex="0" role="listitem" aria-label="Local TV network sponsor">
+      <img class="sponsor-logo" src="Images/PDNS2.png" alt="Local TV network logo" />
+      <p class="sponsor-desc">Electrical solution.</p>
+    </div>
+    <div class="sponsor-card" tabindex="0" role="listitem" aria-label="Team partner sponsor">
+      <img class="sponsor-logo" src="Images/PGKM2.png" alt="Team partner logo" />
+      <p class="sponsor-desc">Freight & Logistics solution.</p>
+    </div>
+    <div class="sponsor-card" tabindex="0" role="listitem" aria-label="Team partner sponsor">
+      <img class="sponsor-logo" src="Images/Pmod2.png" alt="Team partner logo" />
+      <p class="sponsor-desc">Entertainment solution.</p>
+    </div>
+    <!-- Add more sponsors here -->
+    <div class="sponsor-card" tabindex="0" role="listitem" aria-label="LenzIT sponsor">
+      <img class="sponsor-logo" src="Images/PLENZ.png" alt="LenzIT logo" />
+      <p class="sponsor-desc">IT Solutions provider.</p>
+    </div>
+  </div>
+  <div class="cta-box" role="button" tabindex="0" onclick="location.href='contact.html'">
+    Interested in sponsoring Ammar Soccer Academy? Contact us today!
+  </div>
+</main>
+<footer>
+  <div class="footer-contact">
+    <p><strong>Contact Us</strong></p>
+    <p>Email: <a href="mailto:info@ammarsoccer.com">info@ammarsoccer.com</a></p>
+    <p>Phone: +27 12 345 6789</p>
+    <p>Location: Cape Town, South Africa</p>
+  </div>
+  <p class="footer-copy">&copy; 2025 Ammar Soccer Academy. All rights reserved.</p>
+</footer>
+</body>
+</html>

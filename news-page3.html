@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ammar Soccer Academy - News (Page 3)</title>
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+    a {
+      text-decoration: none;
+      color: #E39719;
+    }
+    a:hover {
+      color: #fffde7;
+      text-decoration: none;
+    }
+    header {
+      background: #000;
+      color: #E39719;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    header .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    header .logo img {
+      height: 80px;
+      margin-right: 10px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #E39719;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #bfa500;
+      text-decoration: none;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #E39719;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      right: 0;
+      z-index: 5;
+    }
+    .dropdown-content a {
+      color: #E39719;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+      font-size: 0.97rem;
+    }
+    .dropdown-content a:hover {
+      background-color: #333;
+      color: #fffde7;
+      text-decoration: none;
+    }
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+    main {
+      max-width: 1100px;
+      margin: 45px auto;
+      padding: 0 20px 60px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      padding-bottom: 8px;
+      margin-bottom: 30px;
+      color: #000;
+      width: fit-content;
+    }
+    article {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 14px rgba(0,0,0,0.1);
+    }
+    article h2 {
+      color: #000;
+      margin-bottom: 12px;
+    }
+    article img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    article p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #222;
+      text-align: justify;
+    }
+    .pagination {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 70px;
+    }
+    .pagination a, .pagination span {
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 10px 25px;
+      border: 2px solid #E39719;
+      border-radius: 8px;
+      color: #E39719;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin: 0 5px;
+      background: none;
+    }
+    .pagination a:hover {
+      background-color: #E39719;
+      color: #fffde7;
+      text-decoration: none;
+    }
+    .pagination span {
+      cursor: default;
+      background: #eee;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    footer {
+      background-color: #111;
+      color: #E39719;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 5rem;
+    }
+    footer a {
+      color: #E39719;
+    }
+    footer a:hover {
+      color: #fffde7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="Images/logo.png" alt="Ammar Soccer Academy logo" />
+    <span><img src="Images/ASAW.png" alt="A.S.A emblem" /></span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="team.html">Team</a>
+    <a href="fixtures.html">Fixtures &amp; Results</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <div class="dropdown">
+      <a href="#" class="dropbtn">More &#9662;</a>
+      <div class="dropdown-content">
+        <a href="partners.html">Partners</a>
+        <a href="about.html">About</a>
+        <a href="honours.html">Honours</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <h1>Latest News</h1>
+
+  <article tabindex="0">
+    <h2>Matchday 10: Hard-Fought Away Victory!</h2>
+    <h3>24 January 2025 | Thornton, Cape Town</h3>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="New website" />
+    <p>A massive 2-1 away win against Santos FC in a game full of drama, penalties, and key tactical changes!</p>
+    <p>We started strong, taking the lead in the first half through a coolly converted penalty by Lysakhanya. However, Santos responded with a penalty of their own—scoring on their second attempt after missing the first. The teams went into halftime locked at 1-1.
+
+In the second half, tactical changes from the coach proved to be the difference. The introduction of De Flandre shifted the momentum as he drew two red cards from the opposition, forcing them down to nine men. With the numerical advantage, Caleb came off the bench to deliver the winning goal and secure another crucial three points!
+
+A fantastic team performance and another step forward in our ABC Motsepe League journey! Thank you to our traveling supporters—your energy pushed us to the finish line!</p>
+  </article>
+  <article tabindex="0">
+    <h2>Matchday 9: Last-Minute Magic Secures Home Win!</h2>
+    <h3>18 January 2025 | Mbekweni, Paarl</h3>
+    <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=900&q=80" alt="Summer camp" />
+    <p>We kicked off 2025 with a dramatic 1-0 victory at home against Maties FC, thanks to a late strike from Fu’aad in the dying moments of the game!</p>
+    <p>The match took an early twist when Maties FC were reduced to 10 men in the first half after a dangerous tackle, giving us the numerical advantage. Despite this, our opponents remained compact and made it difficult for us to break through.</p>
+    <p>We kept pushing, and just when it seemed like the points would be shared, Fu’aad stepped up with a clutch finish to secure all three points!
+
+A fantastic way to start the year, and a big thank you to our incredible fans for their support! Onward and upward!</p>
+  </article>
+  <article tabindex="0">
+    <h2>Wrapping Up 2024 – A Solid Start to Our ABC Motsepe Journey!</h2>
+    <img src="https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?auto=format&fit=crop&w=900&q=80" alt="Parent player meeting" />
+    <p>As the year comes to an end, we close off 2024 sitting in 7th place on the standings with 9 points after 7 matches played. It has been a season of growth, learning, and fighting spirit as we continue to establish ourselves in the ABC Motsepe League.</p>
+    <p>Our Record So Far: <p>
+</p>✅ 2 Wins </p>
+</p>➖ 3 Draws </p>
+</p>❌ 2 Losses </p>
+</p>⚽ 11 Goals Scored </p>
+</p>🛑 7 Goals Conceded</p>
+    <p>From making history in our first match to securing our first home win and showing resilience in tough away games, we have proven that we belong at this level. There is still plenty to play for in 2025, and we are determined to build on this foundation, improve our performances, and push even higher up the table.
+
+A massive thank you to our players, coaching staff, and incredible supporters for making this journey special. We are just getting started!</p>
+  </article>
+  <article tabindex="0">
+    <h2>Matchday 8: Heartbreak at Home!</h2>
+    <h3>30 November 2024 | Mbekweni, Paarl</h3>
+    <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=900&q=80" alt="Volunteers welcome" />
+    <p>Despite a strong start, our team suffered a disappointing 1-2 defeat at home against Royal Blues Soccer FC.</p>
+    <p>We took the lead early and controlled much of the first half, heading into the break 1-0 up and full of confidence. However, the second half saw the momentum shift, as our opponents fought back and managed to score twice, turning the game around and denying us any points from the match.</p>
+    <p>A tough result to take, but we learn, regroup, and come back stronger. Thank you to our fans for the continued support—we keep pushing forward!</p>
+  </article>
+  <article tabindex="0">
+    <h2>Matchday 7: Battling Draw on the Road!</h2>
+    <h3>23 November 2024 | Oudtshoorn, WC</h3>
+    <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=900&q=80" alt="Thank you seniors" />
+    <p>Our team showed immense fighting spirit in a tough away fixture against Infantry School FC, securing a 1-1 draw despite playing with 10 men.</p>
+    <p>After a goalless first half, the game took a challenging turn as we were reduced to 10 men. Our opponents capitalized on the advantage and broke the deadlock, putting us under pressure. However, we responded immediately, with Fu’aad stepping up to score the equalizer and ensure we walked away with a hard-earned point.</p>
+    <p>A true show of resilience from the squad, proving once again that we are ready to fight for every result.</p>
+  </article>
+
+  <div class="pagination">
+    <a href="news-page2.html" aria-label="Previous page">&laquo; Previous</a>
+    <a href="news-page4.html" aria-label="Next page">Next &raquo;</a>
+  </div>
+
+<footer>
+  <div class="footer-contact">
+    <p><strong>Contact Us</strong></p>
+    <p>Email: <a href="mailto:info@ammarsoccer.com">info@ammarsoccer.com</a></p>
+    <p>Phone: +27 12 345 6789</p>
+    <p>Cape Town, South Africa</p>
+  </div>
+  <p class="footer-copy">&copy; 2025 Ammar Soccer Academy. All rights reserved.</p>
+</footer>
+</body>
+</html>

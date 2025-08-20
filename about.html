@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ammar Soccer Academy - About</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+    a { text-decoration: none; color: #E39719; }
+    a:hover { color: #fffde7; text-decoration: none; }
+    header {
+      background: #000; color: #E39719; display: flex;
+      justify-content: space-between; align-items: center;
+      padding: 30px 30px; position: sticky; top: 0; z-index: 20;
+    }
+    header .logo { display: flex; align-items: center; font-weight: bold; font-size: 1.5rem; letter-spacing: 3px; cursor: pointer;}
+    header .logo img { height: 80px; margin-right: 10px;}
+    nav { display: flex; align-items: center;}
+    nav a { margin-left: 25px; font-weight: 600; font-size: 1rem; color: #E39719;}
+    nav a:hover { color: #E39719;}
+    .dropdown { position: relative; display: inline-block;}
+    .dropbtn { margin-left: 25px; font-weight: 600; font-size: 1rem; color: #E39719; cursor: pointer; display: inline-block;}
+    .dropdown-content {
+      display: none; position: absolute; background-color: #000;
+      min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px; right: 0; z-index: 5;
+    }
+    .dropdown-content a {
+      padding: 10px 16px; display: block; font-weight: 500; font-size: 0.97rem; color: #E39719;
+    }
+    .dropdown-content a:hover { background: #333; color: #fffde7;}
+    .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content { display: block;}
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.12);
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #000;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #E39719;
+      padding-bottom: 8px;
+      width: fit-content;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #000;
+      margin-top: 45px;
+      border-bottom: none;
+      padding-bottom: 4px;
+      width: fit-content;
+      margin-bottom: 20px;
+    }
+    .about-img {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+      margin: 25px auto 38px auto;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255,208,58,.12);
+    }
+    p { font-size: 1.13rem; margin-bottom: 1.7rem; text-align: justify;}
+    ul.values-list {
+      display: flex; flex-wrap: wrap; gap: 22px; list-style: none; margin: 0 0 2.4rem 0; padding: 0;
+    }
+    ul.values-list li {
+      background: #fffde7; border-left: 5px solid #E39719; padding: 1.1em 1.2em 1.1em 1.6em;
+      border-radius: 10px; flex: 1 1 220px; font-size: 1.09rem;
+    }
+    @media (max-width: 760px) {
+      main{padding:18px 3vw;} ul.values-list{flex-direction:column;}
+      .about-img {max-width:97vw;}
+    }
+footer {
+  background-color: #111;
+  color: #E39719;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 5rem;
+}
+.footer-contact, .footer-copy {
+  text-align: center;
+}
+footer a { color: #E39719; }
+footer a:hover { color: #fffde7; }
+.footer-copy { margin-top: 1.3rem; }
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="Images/logo.png" alt="Ammar Soccer Academy logo" />
+    <span><img src="Images/ASAW.png" alt="A.S.A emblem" /></span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="team.html">Team</a>
+    <a href="fixtures.html">Fixtures &amp; Results</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <div class="dropdown">
+      <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">More &#9662;</a>
+      <div class="dropdown-content">
+        <a href="partners.html">Partners</a>
+        <a href="about.html">About</a>
+        <a href="honours.html">Honours</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <h1>About Ammar Soccer Academy</h1>
+  <img src="Images/team-photo.jpg" alt="Ammar Soccer Academy Team" class="about-img" />
+  <h2>Our Story</h2>
+  <p>
+    Ammar Soccer Academy was founded with a single vision: to empower youth and build community through the beautiful game of soccer. Since our debut, we've grown into a recognized name for both sporting achievement and character development in the Cape Town region. Our club offers a nurturing, inclusive environment where players of all backgrounds can thrive, fostering a deep love of the game while teaching life skills that extend far beyond the field.
+  </p>
+  <h2>Mission & Values</h2>
+  <p>
+    Our mission is to develop not only outstanding soccer players but also responsible leaders, teammates, and citizens. We focus on holistic growth — technical skills, tactical intelligence, physical fitness, and respect on and off the pitch.
+  </p>
+  <ul class="values-list">
+    <li><strong>Integrity:</strong> We play fair, respect the rules, and honor our commitments.</li>
+    <li><strong>Unity:</strong> Every voice matters. Teamwork and inclusion are at the heart of our academy.</li>
+    <li><strong>Growth:</strong> We champion continuous learning and personal improvement.</li>
+    <li><strong>Passion:</strong> We are driven by love for the game and pride in our club.</li>
+    <li><strong>Community Focus:</strong> Giving back and uplifting youth are core to our ethos.</li>
+  </ul>
+  <h2>Meet Our Coaches</h2>
+  <p>
+    Our experienced coaching staff brings a blend of local football knowledge and modern training expertise. Meet our team on the <a href="team.html">Team page</a>.
+  </p>
+  <h2>Contact & Location</h2>
+  <p>
+    <strong>Address:</strong> 34 Broad Road, Wynberg, Cape Town, South Africa<br>
+    <strong>Email:</strong> <a href="mailto:info@ammarsoccer.com">info@ammarsoccer.com</a><br>
+    <strong>Phone:</strong> +27 12 345 6789
+  </p>
+</main>
+<footer>
+  <div class="footer-contact">
+    <p><strong>Contact Us</strong></p>
+    <p>Email: <a href="mailto:info@ammarsoccer.com">info@ammarsoccer.com</a></p>
+    <p>Phone: +27 12 345 6789</p>
+    <p>Cape Town, South Africa</p>
+  </div>
+  <p class="footer-copy">&copy; 2025 Ammar Soccer Academy. All rights reserved.</p>
+</footer>
+

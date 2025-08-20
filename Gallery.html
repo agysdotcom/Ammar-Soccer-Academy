@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ammar Soccer Academy - Gallery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    a {
+      text-decoration: none;
+      color: #E39719;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #fffde7;
+    }
+
+    /* Header */
+    header {
+      background: #000;
+      color: #E39719;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      cursor: pointer;
+    }
+
+    header .logo img {
+      height: 80px;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #E39719;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #E39719;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      right: 0;
+      z-index: 5;
+    }
+
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      font-weight: 500;
+      font-size: 0.97rem;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #333;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+    /* Gallery Section */
+    main.gallery-container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-section {
+      margin-bottom: 3rem;
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    .gallery-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #E39719;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 5rem;
+    }
+
+    footer a {
+      color: #E39719;
+    }
+
+    footer a:hover {
+      color: #fffde7;
+    }
+
+    /* Responsive Nav */
+    @media (max-width: 768px) {
+      nav a, .dropbtn {
+        margin-left: 15px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="Images/logo.png" alt="Ammar Soccer Academy logo" />
+      <span><img src="Images/ASAW.png" alt="A.S.A emblem" /></span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="fixtures.html">Fixtures &amp; Results</a>
+      <a href="news.html">News</a>
+      <a href="gallery.html">Gallery</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">More &#9662;</a>
+        <div class="dropdown-content">
+          <a href="partners.html">Partners</a>
+          <a href="about.html">About</a>
+          <a href="honours.html">Honours</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Gallery Section -->
+  <main class="gallery-container">
+
+    <!-- Training Section -->
+    <section class="gallery-section">
+      <h2 class="gallery-title">Training</h2>
+      <p class="gallery-subtitle">Behind the scenes of our training sessions</p>
+      <div class="gallery-grid">
+        <img src="Images/Training/2025_07_15_1359.jpg" alt="Training 1">
+        <img src="Images/Training/2025_07_15_1360.jpg" alt="Training 2">
+        <img src="Images/Training/2025_07_15_1361.jpg" alt="Training 3">
+        <img src="Images/Training/2025_07_15_1362.jpg" alt="Training 4">
+        <img src="Images/Training/2025_07_15_1363.jpg" alt="Training 5">
+        <img src="Images/Training/2025_07_15_1364.jpg" alt="Training 6">
+        <img src="Images/Training/2025_07_15_1365.jpg" alt="Training 7">
+        <img src="Images/Training/2025_07_15_1366.jpg" alt="Training 8">
+        <img src="Images/Training/2025_07_15_1367.jpg" alt="Training 9">
+        <img src="Images/Training/2025_07_15_1368.jpg" alt="Training 10">
+      </div>
+    </section>
+
+    <!-- Match Day Section -->
+    <section class="gallery-section">
+      <h2 class="gallery-title">Match Day </h2>
+      <p class="gallery-subtitle">Memorable moments from different match days</p>
+      <div class="gallery-grid">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.34.29.jpeg" alt="Match 1">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.34.31 (1).jpeg" alt="Match 2">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.34.31.jpeg" alt="Match 3">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.41.jpeg" alt="Match 4">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.50.jpeg" alt="Match 5">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (1).jpeg" alt="Match 6">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (2).jpeg" alt="Match 7">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (3).jpeg" alt="Match 8">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (4).jpeg" alt="Match 9">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54.jpeg" alt="Maatch 10">
+      
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-contact">
+      <p><strong>Contact Us</strong></p>
+      <p>Email: <a href="mailto:info@ammarsoccer.com">info@ammarsoccer.com</a></p>
+      <p>Phone: +27 12 345 6789</p>
+      <p>Cape Town, South Africa</p>
+    </div>
+    <p class="footer-copy">&copy; 2025 Ammar Soccer Academy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ammar Soccer Academy - News (Page 3)</title>
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+    a {
+      text-decoration: none;
+      color: #E39719;
+    }
+    a:hover {
+      color: #fffde7;
+      text-decoration: none;
+    }
+    header {
+      background: #000;
+      color: #E39719;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    header .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    header .logo img {
+      height: 80px;
+      margin-right: 10px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #E39719;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #bfa500;
+      text-decoration: none;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #E39719;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      right: 0;
+      z-index: 5;
+    }
+    .dropdown-content a {
+      color: #E39719;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+      font-size: 0.97rem;
+    }
+    .dropdown-content a:hover {
+      background-color: #333;
+      color: #fffde7;
+      text-decoration: none;
+    }
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+    main {
+      max-width: 1100px;
+      margin: 45px auto;
+      padding: 0 20px 60px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      padding-bottom: 8px;
+      margin-bottom: 30px;
+      color: #000;
+      width: fit-content;
+    }
+    article {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 14px rgba(0,0,0,0.1);
+    }
+    article h2 {
+      color: #000;
+      margin-bottom: 12px;
+    }
+    article img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    article p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #222;
+      text-align: justify;
+    }
+    .pagination {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 70px;
+    }
+    .pagination a, .pagination span {
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 10px 25px;
+      border: 2px solid #E39719;
+      border-radius: 8px;
+      color: #E39719;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin: 0 5px;
+      background: none;
+    }
+    .pagination a:hover {
+      background-color: #E39719;
+      color: #fffde7;
+      text-decoration: none;
+    }
+    .pagination span {
+      cursor: default;
+      background: #eee;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    footer {
+      background-color: #111;
+      color: #E39719;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 5rem;
+    }
+    footer a {
+      color: #E39719;
+    }
+    footer a:hover {
+      color: #fffde7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="Images/logo.png" alt="Ammar Soccer Academy logo" />
+    <span><img src="Images/ASAW.png" alt="A.S.A emblem" /></span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="team.html">Team</a>
+    <a href="fixtures.html">Fixtures &amp; Results</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <div class="dropdown">
+      <a href="#" class="dropbtn">More &#9662;</a>
+      <div class="dropdown-content">
+        <a href="partners.html">Partners</a>
+        <a href="about.html">About</a>
+        <a href="honours.html">Honours</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <h1>Latest News</h1>
+
+  <article tabindex="0">
+    <h2>Soccer Academy Launches New Website</h2>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="New website" />
+    <p>Our new website is officially live! Visitors can now access schedules, news updates, and club history easily from any device.</p>
+  </article>
+  <article tabindex="0">
+    <h2>Summer Camp Registrations Open</h2>
+    <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=900&q=80" alt="Summer camp" />
+    <p>Summer soccer camp registration is now open! Sign up on our website to secure your spot for a week of fun and learning.</p>
+  </article>
+  <article tabindex="0">
+    <h2>Parent-Player Meeting Recap</h2>
+    <img src="https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?auto=format&fit=crop&w=900&q=80" alt="Parent player meeting" />
+    <p>We had a fantastic turnout for the seasonal parent-player meeting! Thanks to all who attended, and stay tuned for more club events.</p>
+  </article>
+  <article tabindex="0">
+    <h2>Matchday 3: Derby Drama in Mbekweni!</h2>
+    <h3>26 October 2024 | Mbekweni, Paarl</h3>
+    <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=900&q=80" alt="Volunteers welcome" />
+    <p>Matchday 3 saw us take on Mbekweni Cosmos in a heated local derby, filled with passion, intensity, and end-to-end action.</p>
+    <p>After a tough first half, we went into the break trailing, but the team came out fighting in the second half. Our persistence paid off when Sisekho found the equalizer, bringing us level and igniting our hopes of taking something from the game.</p>
+    <p>Just as it seemed we would walk away with a valuable point, Cosmos managed to find a heartbreaking late winner, sealing a narrow 2-1 defeat for us in the dying minutes.</p>
+    <p>Though the result didn’t go our way, the team showed resilience and determination—qualities that will drive us forward as we continue our ABC Motsepe League journey. We take the lessons, regroup, and come back stronger!</p>
+  </article>
+  <article tabindex="0">
+    <h2>Matchday 2: Historic Debut in the ABC Motsepe League!</h2>
+    <h3>19 October 2024 | Hermanus</h3>
+    <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=900&q=80" alt="Thank you seniors" />
+    <p>Our team made history as we played our first-ever ABC Motsepe League match against Salim United FC in Hermanus. Originally scheduled for Matchday 1, our debut had to be postponed to a later date, making this Matchday 2 clash even more special.</p>
+    <p>It was a hard-fought encounter, with both teams displaying resilience and determination, ending in a goalless draw (0-0). Despite the lack of goals, we showed great discipline, teamwork, and fighting spirit—proving that we belong at this level.</p>
+    <p>A solid defensive performance kept our opponents at bay, while our attacking unit created several promising chances. This result lays a strong foundation for the season ahead, and we are ready to keep pushing forward.</p>
+  </article>
+
+  <div class="pagination">
+    <a href="news-page3.html" aria-label="Previous page">&laquo; Previous</a>
+    <span>Next &raquo;</span>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-contact">
+    <p><strong>Contact Us</strong></p>
+    <p>Email: <a href="mailto:info@ammarsoccer.com">info@ammarsoccer.com</a></p>
+    <p>Phone: +27 12 345 6789</p>
+    <p>Cape Town, South Africa</p>
+  </div>
+  <p class="footer-copy">&copy; 2025 Ammar Soccer Academy. All rights reserved.</p>
+</footer>
+</body>
+</html>
