@@ -1,63 +1,41 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ammar Soccer Academy - News (Page 3)</title>
-  <style>
-    * { margin:0; padding:0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #fff;
-      color: #000;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cape Town United FC | ABC Motsepe League</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://images.unsplash.com/photo-1579952363871-90f1bafa9c69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+  }
+  .table-row:hover {
+    background-color: #f8f9fa;
+  }
+  @media (max-width: 768px) {
+    .hero {
+      height: 60vh;
     }
-    a {
-      text-decoration: none;
-      color: #E39719;
-    }
-    a:hover {
-      color: #fffde7;
-      text-decoration: none;
-    }
-    header {
-      background: #000;
-      color: #E39719;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 30px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-    }
-    header .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
-      letter-spacing: 3px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-    header .logo img {
-      height: 80px;
-      margin-right: 10px;
-    }
-    nav {
-      display: flex;
-      align-items: center;
-    }
-    nav a {
-      margin-left: 25px;
-      font-weight: 600;
-      font-size: 1rem;
-      color: #E39719;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    nav a:hover {
-      color: #bfa500;
-      text-decoration: none;
-    }
+  }
+  /* Override Tailwind green with #E39719 */
+  .bg-green-800,
+  .bg-green-700,
+  .bg-green-600,
+  .text-green-800,
+  .text-green-700,
+  .text-green-600,
+  .text-green-200 {
+    background-color: #e4900a !important;
+    color: #0e0e0e !important;
+  }
+  .bg-green-100 {
+    background-color: #FEF6DE !important; /* light shade for 1st position */
+  }
     .dropdown {
       position: relative;
       display: inline-block;
@@ -160,49 +138,42 @@
       opacity: 0.6;
       pointer-events: none;
     }
-    footer {
-      background-color: #111;
-      color: #E39719;
-      padding: 2rem 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 5rem;
-    }
-    footer a {
-      color: #E39719;
-    }
-    footer a:hover {
-      color: #fffde7;
-    }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">
-    <img src="Images/logo.png" alt="Ammar Soccer Academy logo" />
-    <span><img src="Images/ASAW.png" alt="A.S.A emblem" /></span>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="team.html">Team</a>
-    <a href="fixtures.html">Fixtures &amp; Results</a>
-    <a href="news.html">News</a>
-    <a href="gallery.html">Gallery</a>
-    <div class="dropdown">
-      <a href="#" class="dropbtn">More &#9662;</a>
-      <div class="dropdown-content">
-        <a href="partners.html">Partners</a>
-        <a href="about.html">About</a>
-        <a href="honours.html">Honours</a>
-        <a href="contact.html">Contact</a>
-      </div>
+<!-- Navigation -->
+<nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-futbol text-2xl"></i>
+      <a href="index.html" class="text-xl font-bold">Ammar Soccer Academy</a>
     </div>
-  </nav>
-</header>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div class="hidden md:flex space-x-8">
+      <a href="fixtures.html" class="hover:text-yellow-300 font-medium">Fixtures & Results</a>
+      <a href="team.html" class="hover:text-yellow-300 font-medium">Team</a>
+      <a href="news.html" class="hover:text-yellow-300 font-medium">News</a>
+      <a href="galery.html" class="hover:text-yellow-300 font-medium">Gallery</a>
+      <a href="partners.html" class="hover:text-yellow-300 font-medium">Partners</a>
+      <a href="contact.html" class="hover:text-yellow-300 font-medium">Contact</a>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 px-4">
+    <a href="fixtures.html" class="block py-2 hover:text-yellow-300">Fixtures & Results</a>
+    <a href="team.html" class="hover:text-yellow-300 font-medium">Team</a>
+    <a href="news.html" class="block py-2 hover:text-yellow-300">News</a>
+    <a href="galery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
+    <a href="partners.html" class="block py-2 hover:text-yellow-300">Partners</a>
+    <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+  </div>
+</nav>
 
 <main>
-  <h1>Latest News</h1>
 
   <article tabindex="0">
     <h2>Matchday 15: Hard-Fought Draw on the Road!</h2>
@@ -259,14 +230,87 @@ Despite the loss, the team gave a spirited performance against top opposition, p
   </div>
 </main>
 
-<footer>
-  <div class="footer-contact">
-    <p><strong>Contact Us</strong></p>
-    <p>Email: <a href="mailto:info@ammarsoccer.com">info@ammarsoccer.com</a></p>
-    <p>Phone: +27 12 345 6789</p>
-    <p>Cape Town, South Africa</p>
-  </div>
-  <p class="footer-copy">&copy; 2025 Ammar Soccer Academy. All rights reserved.</p>
-</footer>
+   <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12" role="contentinfo">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Ammar Soccer Academy</h3>
+          <p class="text-gray-400">Proudly representing the Cape Winelands.</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="fixtures.html" class="text-gray-400 hover:text-white transition duration-300">Fixtures & Results</a>
+            </li>
+            <li><a href="galery.html" class="text-gray-400 hover:text-white transition duration-300">Gallery</a></li>
+            <li><a href="news.html" class="text-gray-400 hover:text-white transition duration-300">News</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Club</h4>
+          <ul class="space-y-2">
+            <li><a href="team.html" class="text-gray-400 hover:text-white transition duration-300">Team</a></li>              
+            <li><a href="partners.html" class="text-gray-400 hover:text-white transition duration-300">Partners</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Newsletter</h4>
+          <p class="text-gray-400 mb-4">Subscribe to get the latest news and updates.</p>
+          <form class="flex" action="#" method="POST" aria-label="Subscribe to newsletter">
+            <input type="email" name="email" placeholder="Your email" required
+              class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full" />
+            <button type="submit"
+              class="bg-green-700 hover:bg-green-800 px-4 py-2 rounded-r-lg transition duration-300" aria-label="Subscribe">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Ammar Soccer Academy. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">  </a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">Design by Lenzit</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
