@@ -1,292 +1,279 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact - Ammar Soccer Academy</title>
+<title>Cape Town United FC | ABC Motsepe League</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
-  /* Reset & base */
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #ffffff;
-    color: #000;
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://images.unsplash.com/photo-1579952363871-90f1bafa9c69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
   }
-
-  /* Header */
-  header {
-    background: #000;
-    color: #E39719;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 20;
+  .table-row:hover {
+    background-color: #f8f9fa;
   }
-  header .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-  header .logo img {
-    height: 80px;
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-  header .logo span {
-    vertical-align: middle;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-  }
-
-  nav a {
-    margin-left: 25px;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #E39719;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  nav a:hover {
-    color: #E39719;
-    text-decoration: none;
-  }
-
-  /* Dropdown */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropbtn {
-    margin-left: 25px;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #E39719;
-    cursor: pointer;
-    display: inline-block;
-    text-decoration: none;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #000;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 4px;
-    right: 0;
-  }
-  .dropdown-content a {
-    color: #E39719;
-    padding: 10px 16px;
-    text-decoration: none;
-    display: block;
-    font-weight: 500;
-    font-size: 0.97rem;
-  }
-  .dropdown-content a:hover {
-    background-color: #333;
-    color: #fffde7;
-  }
-  .dropdown:hover .dropdown-content,
-  .dropdown:focus-within .dropdown-content {
-    display: block;
-  }
-
-  /* Main content */
-  main {
-    max-width: 650px;
-    margin: 50px auto 30px auto;
-    padding: 40px 30px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    color: #000;
-    margin-bottom: 30px;
-    border-bottom: none;
-    padding-bottom: 10px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  label {
-    font-weight: 600;
-    margin-top: 15px;
-    margin-bottom: 6px;
-    color: #000;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    padding: 15px 18px;
-    font-size: 1rem;
-    border: 2px solid #E39719;
-    border-radius: 12px;
-    background: #ffffff;
-    resize: vertical;
-    color: #000;
-    font-family: inherit;
-  }
-
-  textarea {
-    min-height: 130px;
-  }
-
-  button {
-    margin-top: 30px;
-    padding: 16px;
-    background: #E39719;
-    border: none;
-    border-radius: 12px;
-    color: #000;
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    text-transform: uppercase;
-  }
-
-  button:hover {
-    background: #E39719;
-    color: #fff;
-  }
-
-  /* Hero Banner after form */
-  .hero-banner {
-    max-width: 900px; /* container width */
-    margin: 80px auto 80px auto;
-    position: relative;
-    overflow: visible;
-    border-radius: 12px;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.1);
-    height: 400px;
-  }
-
-  .hero-banner img {
-    width: 120%;         /* image wider than container */
-    max-width: none;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    margin-left: -10%;    /* center bleed out both sides equally */
-    border-radius: 12px;
-  }
-
-  /* Footer */
-  footer {
-    background-color: #111;
-    color: #E39719;
-    padding: 2rem 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 80px;
-  }
-
-  /* Responsive Nav and hero */
-  @media(max-width: 768px) {
-    nav a, .dropbtn {
-      margin-left: 15px;
-      font-size: 0.95rem;
+  @media (max-width: 768px) {
+    .hero {
+      height: 60vh;
     }
+  }
+  /* Override Tailwind green with #E39719 */
+  .bg-green-800,
+  .bg-green-700,
+  .bg-green-600,
+  .text-green-800,
+  .text-green-700,
+  .text-green-600,
+  .text-green-200 {
+    background-color: #e4900a !important;
+    color: #0e0e0e !important;
+  }
+  .bg-green-100 {
+    background-color: #FEF6DE !important; /* light shade for 1st position */
+  }
 
-    main {
-      margin: 30px 20px 30px 20px;
-      padding: 30px 20px;
-    }
-
-    .hero-banner {
-      max-width: 100%;
-      height: 250px;
-      margin: 20px 0 60px 0;
-    }
-
-    .hero-banner img {
-      width: 150%;    /* more bleed on smaller screens */
-      margin-left: -25%;
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://images.unsplash.com/photo-1579952363871-90f1bafa9c69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+  }
+  .table-row:hover {
+    background-color: #f8f9fa;
+  }
+  @media (max-width: 768px) {
+    .hero {
+      height: 60vh;
     }
   }
 </style>
 </head>
-<body>
-
-<!-- Header -->
-<header>
-  <div class="logo">
-    <img src="Images/logo.png" alt="Ammar Soccer Academy logo" />
-    <span><img src="Images/ASAW.png" alt="A.S.A emblem" /></span>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="team.html">Team</a>
-    <a href="fixtures.html">Fixtures &amp; Results</a>
-    <a href="news.html">News</a>
-    <a href="gallery.html">Gallery</a>
-    <div class="dropdown">
-      <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">More &#9662;</a>
-      <div class="dropdown-content" role="menu" aria-label="More navigation links">
-        <a href="partners.html" role="menuitem">Partners</a>
-        <a href="about.html" role="menuitem">About</a>
-        <a href="honours.html" role="menuitem">Honours</a>
-        <a href="contact.html" role="menuitem">Contact</a>
-      </div>
+<body class="font-sans bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-futbol text-2xl"></i>
+      <a href="index.html" class="text-xl font-bold">Ammar Soccer Academy</a>
     </div>
-  </nav>
-</header>
-
-<!-- Main contact form -->
-<main>
-  <h1>Contact Us</h1>
-  <form>
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="Your full name" required />
-
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
-
-    <label for="organization">Organization</label>
-    <input type="text" id="organization" name="organization" placeholder="Your organization" required />
-
-    <label for="enquiry">Type of Enquiry</label>
-    <input type="text" id="enquiry" name="enquiry" placeholder="Your Enquiry" required />
-
-    <label for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
-</main>
-
-<!-- Hero banner with image -->
-<div class="hero-banner" aria-label="Ammar Soccer Academy contact image hero banner">
-  <img src="Images/PTHEFAC.png" alt="Ammar Soccer Academy Team in Action" />
-</div>
-
-<!-- Footer -->
-<footer role="contentinfo">
-  <div class="footer-contact">
-    <p><strong>Contact Us</strong></p>
-    <p>Email: <a href="mailto:info@ammarsoccer.com">info@ammarsoccer.com</a></p>
-    <p>Phone: +27 12 345 6789</p>
-    <p>Location: Cape Town, South Africa</p>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div class="hidden md:flex space-x-8">
+      <a href="index.html" class="hover:text-yellow-300 font-medium">Home</a>
+      <a href="fixtures.html" class="hover:text-yellow-300 font-medium">Fixtures & Results</a>
+      <a href="news.html" class="hover:text-yellow-300 font-medium">News</a>
+      <a href="gallery.html" class="hover:text-yellow-300 font-medium">Gallery</a>
+      <a href="partners.html" class="hover:text-yellow-300 font-medium">Partners</a>
+      <a href="about.html" class="hover:text-yellow-300 font-medium">About</a>
+      <a href="contact.html" class="hover:text-yellow-300 font-medium">Contact</a>
+    </div>
   </div>
-  <p class="footer-copy">&copy; 2025 Ammar Soccer Academy. All rights reserved.</p>
-</footer>
+  <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 px-4">
+    <a href="index.html" class="block py-2 hover:text-yellow-300">Home</a>
+    <a href="fixtures.html" class="block py-2 hover:text-yellow-300">Fixtures & Results</a>
+    <a href="news.html" class="block py-2 hover:text-yellow-300">News</a>
+    <a href="gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
+    <a href="partners.html" class="block py-2 hover:text-yellow-300">Partners</a>
+    <a href="about.html" class="block py-2 hover:text-yellow-300">About</a>
+    <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+  </div>
+</nav>
 
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-e4900a">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Get In Touch</h1>
+            <div class="flex justify-center space-x-4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-bold mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-lg shadow-lg p-8 h-full">
+                        <h3 class="text-xl font-bold mb-6 text-gray-800">Club Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-bg-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Address</h4>
+                                    <p class="text-gray-600">Cape Town Stadium,<br>Fritz Sonnenberg Road,<br>Green Point, Cape Town</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-bg-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">+27 21 123 4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-bg-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">info@ammarsa.co.za</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-bg-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Office Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-red-600 text-white p-3 rounded-full hover:bg-red-700 transition duration-300">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Cape Town United FC</h3>
+                    <p class="text-gray-400">Proudly representing Cape Town in the ABC Motsepe League since 2010.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#fixtures" class="text-gray-400 hover:text-white transition duration-300">Fixtures & Results</a></li>
+                        <li><a href="#news" class="text-gray-400 hover:text-white transition duration-300">News</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition duration-300">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Club</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Honours</a></li>
+                        <li><a href="#partners" class="text-gray-400 hover:text-white transition duration-300">Partners</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get the latest news and updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-green-700 hover:bg-green-800 px-4 py-2 rounded-r-lg transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Cape Town United FC. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
