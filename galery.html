@@ -1,66 +1,67 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gallery - Ammar Soccer Academy</title>
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cape Town United FC | ABC Motsepe League</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://images.unsplash.com/photo-1579952363871-90f1bafa9c69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+  }
+  .table-row:hover {
+    background-color: #f8f9fa;
+  }
+  @media (max-width: 768px) {
+    .hero {
+      height: 60vh;
     }
+  }
+  /* Override Tailwind green with #E39719 */
+  .bg-green-800,
+  .bg-green-700,
+  .bg-green-600,
+  .text-green-800,
+  .text-green-700,
+  .text-green-600,
+  .text-green-200 {
+    background-color: #e4900a !important;
+    color: #0e0e0e !important;
+  }
+  .bg-green-100 {
+    background-color: #FEF6DE !important; /* light shade for 1st position */
+  }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-
-    /* NAVBAR */
-    header {
-      background-color: #111;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* GALLERY SECTION */
-    .gallery-container {
-      padding: 2rem;
+    /* Gallery Styles */
+    main.gallery-container {
+      padding: 2rem 1rem 4rem;
       max-width: 1200px;
       margin: auto;
+    }
+
+    .gallery-section {
+      margin-bottom: 3rem;
     }
 
     .gallery-title {
       text-align: center;
       font-size: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
       color: #222;
+      font-weight: 700;
+    }
+
+    .gallery-subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      color: #555;
+      font-weight: 500;
     }
 
     .gallery-grid {
@@ -71,91 +72,200 @@
 
     .gallery-grid img {
       width: 100%;
+      height: 200px;
       border-radius: 12px;
       object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .gallery-grid img:hover {
       transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
 
-    /* FOOTER */
-    footer {
-      background-color: #111;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
-
-    footer .footer-nav {
-      margin-bottom: 1rem;
-    }
-
-    footer .footer-nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer .footer-nav a:hover {
-      text-decoration: underline;
-    }
-
-    footer .contact-info {
-      font-size: 0.9rem;
-      color: #ccc;
+    /* Responsive Nav */
+    @media (max-width: 768px) {
+      nav a,
+      .dropbtn {
+        margin-left: 15px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">Ammar Soccer Academy</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Programs</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Location</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- GALLERY SECTION -->
-  <div class="gallery-container">
-    <h2 class="gallery-title">Our Training Moments</h2>
-    <div class="gallery-grid">
-      <img src="Images/gallery1.jpg" alt="Gallery image 1">
-      <img src="Images/gallery2.jpg" alt="Gallery image 2">
-      <img src="Images/gallery3.jpg" alt="Gallery image 3">
-      <img src="Images/gallery4.jpg" alt="Gallery image 4">
-      <img src="Images/gallery5.jpg" alt="Gallery image 5">
-      <img src="Images/gallery6.jpg" alt="Gallery image 6">
-      <!-- Add as many images as needed -->
+<!-- Navigation -->
+<nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-futbol text-2xl"></i>
+      <a href="index.html" class="text-xl font-bold">Ammar Soccer Academy</a>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div class="hidden md:flex space-x-8">
+      <a href="index.html" class="hover:text-yellow-300 font-medium">Home</a>
+      <a href="fixtures.html" class="hover:text-yellow-300 font-medium">Fixtures & Results</a>
+      <a href="news.html" class="hover:text-yellow-300 font-medium">News</a>
+      <a href="gallery.html" class="hover:text-yellow-300 font-medium">Gallery</a>
+      <a href="partners.html" class="hover:text-yellow-300 font-medium">Partners</a>
+      <a href="about.html" class="hover:text-yellow-300 font-medium">About</a>
+      <a href="contact.html" class="hover:text-yellow-300 font-medium">Contact</a>
     </div>
   </div>
+  <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 px-4">
+    <a href="index.html" class="block py-2 hover:text-yellow-300">Home</a>
+    <a href="fixtures.html" class="block py-2 hover:text-yellow-300">Fixtures & Results</a>
+    <a href="news.html" class="block py-2 hover:text-yellow-300">News</a>
+    <a href="gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
+    <a href="partners.html" class="block py-2 hover:text-yellow-300">Partners</a>
+    <a href="about.html" class="block py-2 hover:text-yellow-300">About</a>
+    <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+  </div>
+</nav>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="#">Programs</a>
-      <a href="#">News</a>
-      <a href="#">Gallery</a>
-      <a href="#">Contact</a>
+<!-- Hero Section -->
+<section class="hero flex items-center justify-center text-black">
+  <div class="text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Explore the vibrant moments</h1>
+    <div class="flex justify-center space-x-4">
     </div>
-    <div class="contact-info">
-      Email: info@ammarsocceracademy.com | Phone: +27 123 456 789<br>
-      &copy; 2025 Ammar Soccer Academy. All rights reserved.
+  </div>
+</section>
+
+  <!-- Gallery Section -->
+  <main class="gallery-container" id="gallery">
+
+    <!-- Training Section -->
+    <section class="gallery-section" aria-labelledby="training-gallery-title">
+      <h2 class="gallery-title" id="training-gallery-title">Training</h2>
+      <p class="gallery-subtitle">Behind the scenes of our training sessions</p>
+      <div class="gallery-grid">
+        <img src="Images/Training/2025_07_15_1359.jpg" alt="Cape Town United players during a training session 1" loading="lazy" />
+        <img src="Images/Training/2025_07_15_1360.jpg" alt="Cape Town United players during a training session 2" loading="lazy" />
+        <img src="Images/Training/2025_07_15_1361.jpg" alt="Cape Town United players during a training session 3" loading="lazy" />
+        <img src="Images/Training/2025_07_15_1362.jpg" alt="Cape Town United players during a training session 4" loading="lazy" />
+        <img src="Images/Training/2025_07_15_1363.jpg" alt="Cape Town United players during a training session 5" loading="lazy" />
+        <img src="Images/Training/2025_07_15_1364.jpg" alt="Cape Town United players during a training session 6" loading="lazy" />
+        <img src="Images/Training/2025_07_15_1365.jpg" alt="Cape Town United players during a training session 7" loading="lazy" />
+        <img src="Images/Training/2025_07_15_1366.jpg" alt="Cape Town United players during a training session 8" loading="lazy" />
+        <img src="Images/Training/2025_07_15_1367.jpg" alt="Cape Town United players during a training session 9" loading="lazy" />
+        <img src="Images/Training/2025_07_15_1368.jpg" alt="Cape Town United players during a training session 10" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- Match Day Section -->
+    <section class="gallery-section" aria-labelledby="matchday-gallery-title">
+      <h2 class="gallery-title" id="matchday-gallery-title">Match Day</h2>
+      <p class="gallery-subtitle">Memorable moments from different match days</p>
+      <div class="gallery-grid">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.34.29.jpeg" alt="Match day 1 - action shot" loading="lazy" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.34.31 (1).jpeg" alt="Match day 2 - fans cheering" loading="lazy" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.34.31.jpeg" alt="Match day 3 - player celebration" loading="lazy" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.41.jpeg" alt="Match day 4 - team huddle" loading="lazy" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.50.jpeg" alt="Match day 5 - fans with banners" loading="lazy" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (1).jpeg" alt="Match day 6 - player tackle" loading="lazy" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (2).jpeg" alt="Match day 7 - goal celebration" loading="lazy" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (3).jpeg" alt="Match day 8 - crowd shots" loading="lazy" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (4).jpeg" alt="Match day 9 - referee and players" loading="lazy" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54.jpeg" alt="Match day 10 - final whistle" loading="lazy" />
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12" role="contentinfo">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Cape Town United FC</h3>
+          <p class="text-gray-400">Proudly representing Cape Town in the ABC Motsepe League since 2010.</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+            <li><a href="fixtures.html" class="text-gray-400 hover:text-white transition duration-300">Fixtures & Results</a>
+            </li>
+            <li><a href="news.html" class="text-gray-400 hover:text-white transition duration-300">News</a></li>
+            <li><a href="gallery.html" class="text-gray-400 hover:text-white transition duration-300">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Club</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Honours</a></li>
+            <li><a href="partners.html" class="text-gray-400 hover:text-white transition duration-300">Partners</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Newsletter</h4>
+          <p class="text-gray-400 mb-4">Subscribe to get the latest news and updates.</p>
+          <form class="flex" action="#" method="POST" aria-label="Subscribe to newsletter">
+            <input type="email" name="email" placeholder="Your email" required
+              class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full" />
+            <button type="submit"
+              class="bg-green-700 hover:bg-green-800 px-4 py-2 rounded-r-lg transition duration-300" aria-label="Subscribe">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Cape Town United FC. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    });
+  </script>
+
 </body>
+
 </html>
