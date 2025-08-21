@@ -1,305 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ammar Soccer Academy - Fixtures & Results</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cape Town United FC | ABC Motsepe League</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  /* Page background */
+  body {
+    background-color: #e4900a;
+  }
+  /* Theme hover and link colors */
+  .bg-theme-hover:hover {
+    background-color: #c87f12 !important;
+  }
+  .text-theme-light {
+    color: #f3ba36 !important;
+  }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #fff;
-      color: #000;
-    }
+  /* Hero background unchanged */
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://images.unsplash.com/photo-1579952363871-90f1bafa9c69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+  }
 
-    a {
-      text-decoration: none;
-      color: #E39719;
+  .table-row:hover {
+    background-color: #f8f9fa;
+  }
+  @media (max-width: 768px) {
+    .hero {
+      height: 60vh;
     }
+  }
 
-    a:hover {
-      text-decoration: none;
-      color: #fffde7;
-    }
+  /* Standings specific styles - background white */
+  section.standings-section {
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: 0 1rem 2rem 1rem;
+    max-width: 96rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .standing-1 {
+    color: green;
+    background-color: #ccffcc; /* light green */
+    font-weight: bold;
+  }
+  .standing-11,
+  .standing-12 {
+    color: red;
+    background-color: #ffcccc; /* light red */
+  }
 
-    /* Header ... (unchanged) */
-    header {
-      background: #000;
-      color: #E39719;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 30px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-    }
-    header .logo {
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      font-size: 1.5rem;
-      letter-spacing: 3px;
-      cursor: pointer;
-    }
-    header .logo img {
-      height: 80px;
-      margin-right: 10px;
-    }
-    nav {
-      display: flex;
-      align-items: center;
-    }
-    nav a {
-      margin-left: 25px;
-      font-weight: 600;
-      font-size: 1rem;
-      color: #E39719;
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: #E39719;
-      text-decoration: none;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropbtn {
-      margin-left: 25px;
-      font-weight: 600;
-      font-size: 1rem;
-      color: #E39719;
-      cursor: pointer;
-      display: inline-block;
-      text-decoration: none;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #000;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      border-radius: 4px;
-      right: 0;
-      z-index: 5;
-    }
-    .dropdown-content a {
-      padding: 10px 16px;
-      display: block;
-      font-weight: 500;
-      font-size: 0.97rem;
-      color: #E39719;
-      text-decoration: none;
-    }
-    .dropdown-content a:hover {
-      background-color: #333;
-      color: #fffde7;
-      text-decoration: none;
-    }
-    .dropdown:hover .dropdown-content,
-    .dropdown:focus-within .dropdown-content {
-      display: block;
-    }
+  /* Ammar Soccer Academy gold text override */
+  .ammar-soccer-academy {
+    color: #e39719 !important;
+    font-weight: bold;
+  }
 
-    main {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.12);
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #000;
-      margin-bottom: 30px;
-      border-bottom: 3px solid #E39719;
-      padding-bottom: 8px;
-      width: fit-content;
-    }
-    h2 {
-      font-size: 2rem;
-      color: #000;
-      margin-top: 45px;
-      border-bottom: none;
-      padding-bottom: 4px;
-      width: fit-content;
-      margin-bottom: 20px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 25px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      background: #fff;
-    }
-    th, td {
-      padding: 15px 20px;
-      border-bottom: 1px solid #E39719;
-      text-align: left;
-    }
-    th {
-      background: #000;
-      color: #E39719;
-      font-weight: 600;
-    }
-    /* Special styling for standings */
-    tbody tr.standing-first td {
-      color: green !important;
-      font-weight: bold;
-      background: #f7fff7;
-    }
-    tbody tr.ammar-row td {
-      color: #E39719 !important;
-      font-weight: bold;
-      transition: color 0.3s, background 0.3s;
-      background: #fff;
-      cursor: pointer;
-    }
-    tbody tr.ammar-row:hover td {
-      color: #fff !important;
-      background: #E39719 !important;
-    }
-    tbody tr.standing-last td,
-    tbody tr.standing-secondlast td {
-      color: #c0392b !important;
-      font-weight: bold;
-      background: #fff7f7;
-    }
-    /* Optionally, table row hover for other rows */
-    table tbody tr:not(.standing-first):not(.ammar-row):not(.standing-last):not(.standing-secondlast):hover td {
-      background: #E39719;
-      color: #fff;
-    }
-    /* Footer */
-    footer {
-      background-color: #111;
-      color: #E39719;
-      padding: 2rem 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 5rem;
-    }
-    footer a {
-      color: #E39719;
-    }
-    footer a:hover {
-      color: #fffde7;
-    }
-    @media (max-width: 768px) {
-      nav a, .dropbtn {
-        margin-left: 15px;
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+  /* Arrow icons colors */
+  .arrow-up {
+    color: green;
+    margin-left: 8px;
+  }
+  .arrow-down {
+    color: red;
+    margin-left: 8px;
+  }
+
+  /* Team logo styles */
+  .team-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 9999px; /* circle */
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Navigation and other backgrounds with white text for contrast */
+  nav.bg-theme, .bg-theme-hover {
+    background-color: transparent;
+  }
+</style>
 </head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="Images/logo.png" alt="Ammar Soccer Academy logo" />
-      <span><img src="Images/ASAW.png" alt="A.S.A emblem" /></span>
+<body class="font-sans">
+<!-- Navigation -->
+<nav class="bg-theme text-white shadow-lg sticky top-0 z-50" style="background-color: transparent;">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-futbol text-2xl text-white"></i>
+      <a href="index.html" class="text-xl font-bold text-white">Ammar Soccer Academy</a>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="team.html">Team</a>
-      <a href="fixtures.html">Fixtures &amp; Results</a>
-      <a href="news.html">News</a>
-      <a href="gallery.html">Gallery</a>
-      <div class="dropdown">
-        <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">More &#9662;</a>
-        <div class="dropdown-content">
-          <a href="partners.html">Partners</a>
-          <a href="about.html">About</a>
-          <a href="honours.html">Honours</a>
-          <a href="contact.html">Contact</a>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+     </div>
+    <div class="hidden md:flex space-x-8">
+      <a href="index.html" class="hover:text-yellow-300 font-medium">Home</a>
+      <a href="fixtures.html" class="hover:text-yellow-300 font-medium">Fixtures & Results</a>
+      <a href="news.html" class="hover:text-yellow-300 font-medium">News</a>
+      <a href="gallery.html" class="hover:text-yellow-300 font-medium">Gallery</a>
+      <a href="partners.html" class="hover:text-yellow-300 font-medium">Partners</a>
+      <a href="about.html" class="hover:text-yellow-300 font-medium">About</a>
+      <a href="contact.html" class="hover:text-yellow-300 font-medium">Contact</a>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 px-4">
+    <a href="index.html" class="block py-2 hover:text-yellow-300">Home</a>
+    <a href="fixtures.html" class="block py-2 hover:text-yellow-300">Fixtures & Results</a>
+    <a href="news.html" class="block py-2 hover:text-yellow-300">News</a>
+    <a href="gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
+    <a href="partners.html" class="block py-2 hover:text-yellow-300">Partners</a>
+    <a href="about.html" class="block py-2 hover:text-yellow-300">About</a>
+    <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+  </div>
+</nav>
+
+<section class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Fixtures & Results</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Last Match Card -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden fixture-card transition duration-300 hover:translate-y-[-5px] hover:shadow-xl">
+        <div class="bg-theme text-white py-2 px-4" style="background-color:#e4900a;">
+          <h3 class="font-bold text-center">Last Match</h3>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <div class="text-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Gold_star.svg" alt="Ammar Soccer Academy Logo" class="team-logo mx-auto" />
+              <h4 class="font-bold ammar-soccer-academy">Ammar Soccer Academy</h4>
+            </div>
+            <div class="text-center">
+              <div class="bg-[#FEF6DE] rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+                <span class="font-bold text-lg text-theme" style="color:#e4900a;">1 - 1</span>
+              </div>
+              <p class="text-sm mt-2">Sun, 17 August</p>
+              <p class="text-sm">Friendly</p>
+            </div>
+            <div class="text-center">
+              <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/CR_Vasco_da_Gama_logo.svg" alt="CR Vasco Da Gama Logo" class="team-logo mx-auto" />
+              <h4 class="font-bold">CR Vasco Da Gama</h4>
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="text-gray-600 mb-4">Training Ground</p>
+            <a href="news.html" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full transition duration-300">More</a>
+          </div>
         </div>
       </div>
-    </nav>
-  </header>
-<main>
 
+      <!-- Next Match Card -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden fixture-card transition duration-300 hover:translate-y-[-5px] hover:shadow-xl">
+        <div class="bg-theme text-white py-2 px-4" style="background-color:#e4900a;">
+          <h3 class="font-bold text-center">Next Match</h3>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <div class="text-center">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Cape_Town_United_FC_logo.svg/120px-Cape_Town_United_FC_logo.svg.png" alt="Cape Town United Logo" class="team-logo mx-auto" />
+              <h4 class="font-bold">Cape Town Utd</h4>
+            </div>
+            <div class="text-center">
+              <div class="bg-[#FEF6DE] rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+                <span class="font-bold text-lg" style="color:#e4900a;">VS</span>
+              </div>
+              <p class="text-sm mt-2">Sat, 15 July</p>
+              <p class="text-sm">15:00</p>
+            </div>
+            <div class="text-center">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Mitchells_Plain_FC_logo.svg/120px-Mitchells_Plain_FC_logo.svg.png" alt="Mitchells Plain Logo" class="team-logo mx-auto" />
+              <h4 class="font-bold">Mitchells Plain</h4>
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="text-gray-600 mb-4">Athlone Stadium, Cape Town</p>
+            <a href="fixtures.html" class="inline-block bg-theme-hover text-white font-bold py-2 px-4 rounded-full transition duration-300" style="background-color:#e4900a;" onmouseover="this.style.backgroundColor='#b16f10'" onmouseout="this.style.backgroundColor='#c87f12'">Get Tickets</a>
+          </div>
+        </div>
+      </div>
 
-  <h2>Fixtures</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th><th>Opponent</th><th>Venue</th><th>Details</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>July 25, 2025</td><td>Cape Town United</td><td>Home Stadium</td>
-        <td><a href="#" class="link" aria-label="View match details">View details</a></td>
-      </tr>
-      <tr>
-        <td>August 2, 2025</td><td>Silver Stars</td><td>Away Stadium</td>
-        <td><a href="#" class="link">View details</a></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>Recent Results</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th><th>Opponent</th><th>Score</th><th>Match Report</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>July 18, 2025</td><td>Coastal FC</td><td>2 - 1</td>
-        <td><a href="#" class="link">Read report</a></td>
-      </tr>
-      <tr>
-        <td>July 10, 2025</td><td>Valley Rovers</td><td>0 - 0</td>
-        <td><a href="#" class="link">Read report</a></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>2024-2025 ABC Motsepe WC Stream B - STANDING</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Pos</th><th>Team</th><th>Played</th><th>Points</th><th>Goal Diff.</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="standing-first"><td>1</td><td>Hanover Park Fc</td><td>22</td><td>50</td><td>+45</td></tr>
-      <tr><td>2</td><td>Santos FC</td><td>22</td><td>40</td><td>+17</td></tr>
-      <tr><td>3</td><td>Royal Blues</td><td>22</td><td>39</td><td>+10</td></tr>
-      <tr><td>4</td><td>Oriented Birds</td><td>22</td><td>36</td><td>+10</td></tr>
-      <tr class="ammar-row">
-        <td>5</td>
-        <td>Ammar Soccer Academy</td>
-        <td>22</td>
-        <td>34</td>
-        <td>+5</td>
-      </tr>
-      <tr><td>6</td><td>Maties FC</td><td>22</td><td>29</td><td>+7</td></tr>
-      <tr><td>7</td><td>Mbekweni Cosmos FC</td><td>22</td><td>30</td><td>-6</td></tr>
-      <tr><td>8</td><td>Seaside Spurs FC</td><td>22</td><td>29</td><td>+1</td></tr>
-      <tr><td>9</td><td>Barcelona FC</td><td>22</td><td>26</td><td>-20</td></tr>
-      <tr><td>10</td><td>Ubuntu Spartan FC</td><td>22</td><td>24</td><td>-13</td></tr>
-      <tr class="standing-secondlast"><td>11</td><td>Salim Unnited FC</td><td>22</td><td>18</td><td>-22</td></tr>
-      <tr class="standing-last"><td>12</td><td>Infantry School FC</td><td>22</td><td>10</td><td>-35</td></tr>
-    </tbody>
-  </table>
-</main>
-<footer>
-  <div class="footer-contact">
-    <p><strong>Contact Us</strong></p>
-    <p>Email: <a href="mailto:info@ammarsoccer.com">info@ammarsoccer.com</a></p>
-    <p>Phone: +27 12 345 6789</p>
-    <p>Cape Town, South Africa</p>
+      <!-- Upcoming Match Card -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden fixture-card transition duration-300 hover:translate-y-[-5px] hover:shadow-xl">
+        <div class="bg-theme text-white py-2 px-4" style="background-color:#e4900a;">
+          <h3 class="font-bold text-center">Upcoming</h3>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <div class="text-center">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Cape_Town_United_FC_logo.svg/120px-Cape_Town_United_FC_logo.svg.png" alt="Cape Town United Logo" class="team-logo mx-auto" />
+              <h4 class="font-bold">Cape Town Utd</h4>
+            </div>
+            <div class="text-center">
+              <div class="bg-[#FEF6DE] rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+                <span class="font-bold text-lg" style="color:#e4900a;">VS</span>
+              </div>
+              <p class="text-sm mt-2">Sat, 22 July</p>
+              <p class="text-sm">15:00</p>
+            </div>
+            <div class="text-center">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Gugulethu_Stars_logo.svg/120px-Gugulethu_Stars_logo.svg.png" alt="Gugulethu Stars Logo" class="team-logo mx-auto" />
+              <h4 class="font-bold">Gugulethu Stars</h4>
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="text-gray-600 mb-4">Cape Town Stadium, Cape Town</p>
+            <a href="fixtures.html" class="inline-block bg-theme-hover text-white font-bold py-2 px-4 rounded-full transition duration-300" style="background-color:#e4900a;" onmouseover="this.style.backgroundColor='#b16f10'" onmouseout="this.style.backgroundColor='#c87f12'">Get Tickets</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <p class="footer-copy">&copy; 2025 Ammar Soccer Academy. All rights reserved.</p>
+</section>
+
+<!-- League Standings -->
+<section class="py-16 standings-section">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">24-25 Western Cape ABC Motsepe League - Stream B Standings</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full rounded-lg overflow-hidden shadow-md">
+        <thead style="background-color:#e4900a; color:rgb(0, 0, 0);">
+          <tr>
+            <th class="py-3 px-4 text-left">Position</th>
+            <th class="py-3 px-4 text-left">Team</th>
+            <th class="py-3 px-4 text-center">Played</th>
+            <th class="py-3 px-4 text-center">Won</th>
+            <th class="py-3 px-4 text-center">Drawn</th>
+            <th class="py-3 px-4 text-center">Lost</th>
+            <th class="py-3 px-4 text-center">GD</th>
+            <th class="py-3 px-4 text-center">Points</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="standings-tbody">
+          <!-- Rows inserted by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 mt-12 rounded-t-lg">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">Cape Town United FC</h3>
+        <p class="text-gray-400">Proudly representing Cape Town in the ABC Motsepe League since 2010.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+          <li><a href="fixtures.html" class="text-gray-400 hover:text-white transition duration-300">Fixtures & Results</a></li>
+          <li><a href="news.html" class="text-gray-400 hover:text-white transition duration-300">News</a></li>
+          <li><a href="gallery.html" class="text-gray-400 hover:text-white transition duration-300">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Club</h4>
+        <ul class="space-y-2">
+          <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Honours</a></li>
+          <li><a href="partners.html" class="text-gray-400 hover:text-white transition duration-300">Partners</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Newsletter</h4>
+        <p class="text-gray-400 mb-4">Subscribe to get the latest news and updates.</p>
+        <form class="flex" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" placeholder="Your email" required class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full" />
+          <button type="submit" class="bg-theme-hover px-4 py-2 rounded-r-lg transition duration-300" style="background-color:#e4900a;" onmouseover="this.style.backgroundColor='#b16f10'" onmouseout="this.style.backgroundColor='#c87f12'">
+            <i class="fas fa-paper-plane text-white"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Cape Town United FC. All rights reserved.</p>
+      <div class="flex space-x-6">
+        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<script>
+  // Mobile menu toggle
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+
+  const standings = [
+    { pos: 1, team: "Hanover Park FC", played:22, won:15, drawn:5, lost:2, gd:"+45", pts:50 },
+    { pos: 2, team: "Santos FC", played:22, won:11, drawn:7, lost:4, gd:"+17", pts:40 },
+    { pos: 3, team: "Royal Blues FC", played:22, won:12, drawn:3, lost:7, gd:"+11", pts:39 },
+    { pos: 4, team: "Oriented Birds FC", played:22, won:10, drawn:6, lost:6, gd:"+10", pts:36 },
+    { pos: 5, team: "Ammar Soccer Academy", played:22, won:10, drawn:4, lost:8, gd:"+5", pts:35 },
+    { pos: 6, team: "Maties Fc", played:22, won:9, drawn:5, lost:8, gd:"+7", pts:32 },
+    { pos: 7, team: "Mbekweni Cosmos FC", played:22, won:8, drawn:6, lost:8, gd:"-6", pts:30 },
+    { pos: 8, team: "Seaside Spurs FC", played:22, won:8, drawn:5, lost:9, gd:"+1", pts:29 },
+    { pos: 9, team: "Barcelona FC", played:22, won:8, drawn:2, lost:12, gd:"-20", pts:26 },
+    { pos: 10, team: "Ubuntu Spartans FC", played:22, won:7, drawn:3, lost:12, gd:"-13", pts:24 },
+    { pos: 11, team: "Salim United FC", played:22, won:5, drawn:3, lost:14, gd:"-22", pts:18 },
+    { pos: 12, team: "Infantry School FC", played:22, won:1, drawn:7, lost:14, gd:"-35", pts:10 }
+  ];
+
+  function createArrowIcon(direction) {
+    const i = document.createElement('i');
+    if(direction === 'up') {
+      i.className = 'fas fa-arrow-up arrow-up';
+      i.setAttribute('aria-hidden', 'true');
+    } else if(direction === 'down') {
+      i.className = 'fas fa-arrow-down arrow-down';
+      i.setAttribute('aria-hidden', 'true');
+    }
+    return i;
+  }
+
+  function renderStandings() {
+    const tbody = document.getElementById('standings-tbody');
+    tbody.innerHTML = '';
+
+    standings.forEach((team) => {
+      const tr = document.createElement('tr');
+
+      // Apply 1st position green text, light green background
+      if(team.pos === 1) {
+        tr.classList.add('standing-1');
+      } 
+      // Relegation rows 11 & 12 in red text and background
+      else if(team.pos === 11) {
+        tr.classList.add('standing-11');
+      } else if(team.pos === 12) {
+        tr.classList.add('standing-12');
+      }
+
+      // Create position cell
+      const tdPos = document.createElement('td');
+      tdPos.classList.add('py-4', 'px-4', 'font-bold');
+      tdPos.textContent = team.pos;
+      tr.appendChild(tdPos);
+
+      // Team cell
+      const tdTeam = document.createElement('td');
+      tdTeam.classList.add('py-4', 'px-4', 'font-bold', 'flex', 'items-center');
+
+      // Ammar Soccer Academy always in #e39719 text regardless of position
+      if(team.team === "Ammar Soccer Academy") {
+        tdTeam.style.color = "#e39719";
+      }
+      const spanName = document.createElement('span');
+      spanName.textContent = team.team;
+      tdTeam.appendChild(spanName);
+
+      // Arrows for 1st (up-green) and 11/12 (down-red)
+      if(team.pos === 1) {
+        tdTeam.appendChild(createArrowIcon('up'));
+      } else if(team.pos === 11 || team.pos === 12) {
+        tdTeam.appendChild(createArrowIcon('down'));
+      }
+
+      tr.appendChild(tdTeam);
+
+      function createCenterCell(content) {
+        const td = document.createElement('td');
+        td.classList.add('py-4', 'px-4', 'text-center');
+        td.textContent = content;
+        return td;
+      }
+
+      tr.appendChild(createCenterCell(team.played));
+      tr.appendChild(createCenterCell(team.won));
+      tr.appendChild(createCenterCell(team.drawn));
+      tr.appendChild(createCenterCell(team.lost));
+      tr.appendChild(createCenterCell(team.gd));
+      tr.appendChild(createCenterCell(team.pts));
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  renderStandings();
+</script>
 </body>
 </html>
