@@ -52,6 +52,30 @@
       height: 60vh;
     }
   }
+  /* Partner logos 4x bigger */
+.partner-logo img {
+  height: 150%;
+  width: auto;
+}
+
+  /* Social media icons white in footer */
+  footer .social-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+  }
+  footer .social-icon:hover {
+    color: #e4900a;
+  }
+  .hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('Images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
 </style>
 </head>
 <body class="font-sans bg-gray-50">
@@ -59,8 +83,9 @@
 <nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <div class="flex items-center space-x-2">
-      <i class="fas fa-futbol text-2xl"></i>
-      <a href="index.html" class="text-xl font-bold">Ammar Soccer Academy</a>
+      <!-- Club logo instead of ball icon -->
+      <img src="Images/logo.png" alt="Ammar Soccer Academy Logo" class="h-8 w-auto" />
+      <a href="index.html" class="text-xl font-bold">AMMAR SOCCER ACADEMY</a>
     </div>
     <div class="md:hidden">
       <button id="menu-toggle" class="text-white focus:outline-none">
@@ -87,8 +112,9 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero flex items-center justify-center text-white">
-  <div class="text-center px-4">
+<section class="relative h-[90vh] flex items-center justify-center text-Black overflow-hidden">
+  <img src="Images/Matchday/saturday (108 of 196).jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+  <div class="relative z-10 text-center px-4 max-w-4xl">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">WELCOME TO WHERE PASSION MEETS EXCELLENCE ON THE FIELD</h1>
     <p class="text-xl md:text-2xl mb-8">"Empowering youth through soccer excellence"</p>
     <div class="flex justify-center space-x-4">
@@ -111,7 +137,7 @@
         <div class="p-6">
           <div class="flex justify-between items-center mb-4">
             <div class="text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Gold_star.svg" alt="Ammar Soccer Academy Logo" class="team-logo mx-auto" />
+              <img src="Images/logo.png" alt="Ammar Soccer Academy Logo" class="h-24 mx-auto object-contain" />
               <h4 class="font-bold ammar-soccer-academy">Ammar Soccer Academy</h4>
             </div>
             <div class="text-center">
@@ -122,7 +148,7 @@
               <p class="text-sm">Friendly</p>
             </div>
             <div class="text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/CR_Vasco_da_Gama_logo.svg" alt="CR Vasco Da Gama Logo" class="team-logo mx-auto" />
+              <img src="Images/Ops Logos/Vasco_da_Gama_logo.svg" alt="CR Vasco Da Gama Logo" class="h-24 mx-auto object-contain" />
               <h4 class="font-bold">CR Vasco Da Gama</h4>
             </div>
           </div>
@@ -141,7 +167,7 @@
         <div class="p-6">
           <div class="flex justify-between items-center mb-4">
             <div class="text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Cape_Town_United_FC_logo.svg/120px-Cape_Town_United_FC_logo.svg.png" alt="Cape Town United Logo" class="team-logo mx-auto" />
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Cape_Town_United_FC_logo.svg/120px-Cape_Town_United_FC_logo.svg.png" alt="Cape Town United Logo" class="h-24 mx-auto object-contain" />
               <h4 class="font-bold">Cape Town Utd</h4>
             </div>
             <div class="text-center">
@@ -152,7 +178,7 @@
               <p class="text-sm">15:00</p>
             </div>
             <div class="text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Mitchells_Plain_FC_logo.svg/120px-Mitchells_Plain_FC_logo.svg.png" alt="Mitchells Plain Logo" class="team-logo mx-auto" />
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Mitchells_Plain_FC_logo.svg/120px-Mitchells_Plain_FC_logo.svg.png" alt="Mitchells Plain Logo" class="h-24 mx-auto object-contain" />
               <h4 class="font-bold">Mitchells Plain</h4>
             </div>
           </div>
@@ -170,7 +196,7 @@
         <div class="p-6">
           <div class="flex justify-between items-center mb-4">
             <div class="text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Cape_Town_United_FC_logo.svg/120px-Cape_Town_United_FC_logo.svg.png" alt="Cape Town United Logo" class="team-logo mx-auto" />
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Cape_Town_United_FC_logo.svg/120px-Cape_Town_United_FC_logo.svg.png" alt="Cape Town United Logo" class="h-24 mx-auto object-contain" />
               <h4 class="font-bold">Cape Town Utd</h4>
             </div>
             <div class="text-center">
@@ -181,7 +207,7 @@
               <p class="text-sm">15:00</p>
             </div>
             <div class="text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Gugulethu_Stars_logo.svg/120px-Gugulethu_Stars_logo.svg.png" alt="Gugulethu Stars Logo" class="team-logo mx-auto" />
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Gugulethu_Stars_logo.svg/120px-Gugulethu_Stars_logo.svg.png" alt="Gugulethu Stars Logo" class="h-24 mx-auto object-contain" />
               <h4 class="font-bold">Gugulethu Stars</h4>
             </div>
           </div>
@@ -204,13 +230,13 @@
         <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1605&q=80" alt="Team training" class="w-full h-48 object-cover" />
         <div class="p-6">
           <div class="flex items-center text-sm text-gray-500 mb-2">
-            <span>10 July 2023</span>
+            <span>18 August 2025</span>
             <span class="mx-2">•</span>
             <span>Team News</span>
           </div>
-          <h3 class="text-xl font-bold mb-3">Team Prepares for Crucial Derby Match</h3>
+          <h3 class="text-xl font-bold mb-3">Season Prepations continue</h3>
           <p class="text-gray-600 mb-4">
-            The squad has been putting in extra hours at training as they prepare for the upcoming derby against Mitchells Plain FC this weekend.
+            The friendly encounter against CR Vasco da Gama ended in a balanced 1–1 draw, showcasing competitive football from both sides. Our team started strongly, creating several early chances before eventually finding the back of the net with a well-worked goal. Vasco da Gama responded with equal intensity, and after sustained pressure, managed to level the score in the second half. The match proved to be a valuable test of skill and resilience, allowing the players to gain important match fitness and teamwork experience ahead of the upcoming fixtures.
           </p>
           <a href="news.html" class="text-green-700 font-bold hover:text-green-800 transition duration-300">Read More →</a>
         </div>
@@ -287,16 +313,16 @@
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Gallery</h2>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer" onclick="window.location.href='gallery.html'">
-        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=1473&q=80" alt="Team celebration" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.34.31 (1).jpeg" alt="Matchday" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
       </div>
       <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer" onclick="window.location.href='gallery.html'">
-        <img src="https://images.unsplash.com/photo-1543357480-c60d40007fa3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Stadium view" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.41.jpeg" alt="matchday" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
       </div>
       <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer" onclick="window.location.href='gallery.html'">
-        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1605&q=80" alt="Training session" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.50.jpeg" alt="matchday" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
       </div>
       <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer" onclick="window.location.href='gallery.html'">
-        <img src="https://images.unsplash.com/photo-1579952363871-90f1bafa9c69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Match action" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (3).jpeg" alt="Match action" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
       </div>
     </div>
     <div class="text-center mt-12">
@@ -310,24 +336,24 @@
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Partners</h2>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-      <div class="partner-logo bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
-        <img src="Images/PKEC3.png" alt="Partner 1" class="max-h-16" />
+      <div class="partner-logo bg-black p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
+        <img src="Images/PKEC3.png" alt="Partner 1" />
       </div>
-      <div class="partner-logo bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
-        <img src="Images/PDNS3.png" alt="Partner 2" class="max-h-16" />
+      <div class="partner-logo bg-black p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
+        <img src="Images/PDNS3.png" alt="Partner 2" />
       </div>
-      <div class="partner-logo bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
-        <img src="Images/PGKM3.png" alt="Partner 3" class="max-h-16" />
+      <div class="partner-logo bg-black p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
+        <img src="Images/PGKM3.png" alt="Partner 3" />
       </div>
-      <div class="partner-logo bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
-        <img src="Images/PMOD3.png" alt="Partner 4" class="max-h-16" />
+      <div class="partner-logo bg-black p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
+        <img src="Images/PMOD3.png" alt="Partner 4" />
       </div>
-      <div class="partner-logo bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
-        <img src="Images/PLENZ3.png" alt="Partner 5" class="max-h-16" />
+      <div class="partner-logo bg-black p-4 rounded-lg shadow-md flex items-center justify-center h-32 transition duration-300 hover:scale-105 cursor-pointer" onclick="window.location.href='partners.html'">
+        <img src="Images/PLENZ3.png" alt="Partner 5" />
       </div>
     </div>
     <div class="text-center mt-12">
-      <a href="partners.html" class="inline-block bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-full transition duration-300">Become a Partner</a>
+      <a href="partners.html" class="inline-block bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-4 rounded-full transition duration-300">Become a Partner</a>
     </div>
   </div>
 </section>
@@ -421,19 +447,17 @@
           </ul>
         </div>
 
-        <div>
-          <h4 class="font-bold mb-4">Newsletter</h4>
-          <p class="text-gray-400 mb-4">Subscribe to get the latest news and updates.</p>
-          <form class="flex" action="#" method="POST" aria-label="Subscribe to newsletter">
-            <input type="email" name="email" placeholder="Your email" required
-              class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full" />
-            <button type="submit"
-              class="bg-green-700 hover:bg-green-800 px-4 py-2 rounded-r-lg transition duration-300" aria-label="Subscribe">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
+              <!-- Social Media Links replacing Newsletter -->
+      <div>
+        <h4 class="font-bold mb-4">Follow Us</h4>
+        <div class="flex space-x-4">
+          <a href="https://facebook.com/ammarsoccer" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/ammarsa_off" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@Ammarsocceracademy" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
+    </div>
 
       <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Ammar Soccer Academy. All rights reserved.</p>
@@ -545,11 +569,11 @@
   renderStandings();
 </script>
 <script>
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+         // Mobile menu toggle
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
