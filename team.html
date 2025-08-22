@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -174,17 +174,34 @@
       .card-photo {
         height: 140px;
       }
-    }
-  </style>
-</head>
-<body>
+    }  /* Social media icons white in footer */
+  footer .social-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+  }
+  footer .social-icon:hover {
+    color: #e4900a;
+  }
+  .hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('Images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
 
+</style>
+</head>
+<body class="font-sans bg-gray-50">
 <!-- Navigation -->
 <nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <div class="flex items-center space-x-2">
-      <i class="fas fa-futbol text-2xl"></i>
-      <a href="index.html" class="text-xl font-bold">Ammar Soccer Academy</a>
+      <!-- Club logo instead of ball icon -->
+      <img src="Images/logo.png" alt="Ammar Soccer Academy Logo" class="h-8 w-auto" />
+      <a href="index.html" class="text-xl font-bold">AMMAR SOCCER ACADEMY</a>
     </div>
     <div class="md:hidden">
       <button id="menu-toggle" class="text-white focus:outline-none">
@@ -209,141 +226,88 @@
     <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
   </div>
 </nav>
+
 <!-- Hero Section -->
-<section class="hero flex items-center justify-center text-black">
-  <div class="text-center px-4">
+<section class="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
+  <img src="Images/Matchday/WhatsApp Image 2025-08-22 at 11.24.57.jpeg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+  <div class="relative z-10 text-center px-4 max-w-4xl">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Meet The Team</h1>
-    <div class="flex justify-center space-x-4">
-    </div>
   </div>
 </section>
-<main>
 
-  <!-- Staff -->
-  <div class="sub-section-title">Staff</div>
-  <div class="roster-container">
-    <div class="roster-grid">
-      <div class="card">
-        <img class="card-photo" src="Images/Staff/Head.png" alt="Malunga Siyakha" />
-        <div class="card-content">
-          <div class="card-title">Malunga Siyakha</div>
-          <div class="card-role">Head Coach</div>
-        </div>
+<!-- ===== Team Section ===== -->
+<div class="sub-section-title">Staff</div>
+<div class="roster-container">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    
+    <!-- Card -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+      <img src="Images/Staff/ASA 25-26 Season-2-Team Card.png" alt="Malunga Siyakha" class="w-full h-64 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold text-gray-900">Malunga Siyakha</h3>
+        <p class="text-sm font-medium text-gray-600">Head Coach</p>
       </div>
-      <div class="card">
-        <img class="card-photo" src="Images/Staff/Assistant.png" alt="Mary Nkomo" />
-        <div class="card-content">
-          <div class="card-title">Mary Nkomo</div>
-          <div class="card-role">Assistant Coach</div>
-        </div>
+    </div>
+
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+      <img src="Images/Staff/ASA 25-26 Season-2-Team Card (3).png" alt="Mary Nkomo" class="w-full h-64 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold text-gray-900">Jon Doe</h3>
+        <p class="text-sm font-medium text-gray-600">Assistant Coach</p>
       </div>
-      <div class="card">
-        <img class="card-photo" src="Images/Staff/Goalkeepers.png" alt="Peter Adams" />
-        <div class="card-content">
-          <div class="card-title">Peter Adams</div>
-          <div class="card-role">Goalkeeper Coach</div>
-        </div>
+    </div>
+
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+      <img src="Images/Staff/ASA 25-26 Season-2-Team Card (4).png" alt="Peter Adams" class="w-full h-64 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold text-gray-900">Jon Doe</h3>
+        <p class="text-sm font-medium text-gray-600">Goalkeeper Coach</p>
       </div>
-      <div class="card">
-        <img class="card-photo" src="Images/Staff/Fitness.png" alt="Lerato Molefe" />
-        <div class="card-content">
-          <div class="card-title">Lerato A Molefe</div>
-          <div class="card-role">Fitness Coach</div>
-                  </div>
+    </div>
+
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+      <img src="Images/Staff/ASA 25-26 Season-2-Team Card (2).png" alt="Lerato Molefe" class="w-full h-64 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold text-gray-900">Jon Doe</h3>
+        <p class="text-sm font-medium text-gray-600">Fitness Coach</p>
       </div>
-      <div class="card">
-        <img class="card-photo" src="Images/Staff/Physio.png" alt="Lerato Molefe" />
-        <div class="card-content">
-          <div class="card-title">Lerato Molefe</div>
-          <div class="card-role">Club Physio</div>
-        </div>
+    </div>
+
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+      <img src="Images/Staff/ASA 25-26 Season-2-Team Card (1).png" alt="Lerato Molefe" class="w-full h-64 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold text-gray-900">Jon Doe</h3>
+        <p class="text-sm font-medium text-gray-600">Club Physio</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Repeat the same grid structure for Players (Goalkeepers, Defenders, etc.) -->
+<div class="sub-section-title">Goalkeepers</div>
+<div class="roster-container">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+      <img src="Images/player-gk1.jpg" alt="Thabo Mokoena" class="w-full h-64 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold text-gray-900">Thabo Mokoena</h3>
+        <p class="text-sm font-medium text-gray-600">Goalkeeper</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+      <img src="Images/player-gk2.jpg" alt="Lwazi Smith" class="w-full h-64 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold text-gray-900">Lwazi Smith</h3>
+        <p class="text-sm font-medium text-gray-600">Goalkeeper</p>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Players -->
-  <div class="sub-section-title">Goalkeepers</div>
-  <div class="roster-container">
-    <div class="roster-grid">
-      <div class="card">
-        <img class="card-photo" src="Images/player-gk1.jpg" alt="Thabo Mokoena" />
-        <div class="card-content">
-          <div class="card-title">Thabo Mokoena</div>
-          <div class="card-role">Goalkeeper</div>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-photo" src="Images/player-gk2.jpg" alt="Lwazi Smith" />
-        <div class="card-content">
-          <div class="card-title">Lwazi Smith</div>
-          <div class="card-role">Goalkeeper</div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="sub-section-title">Defenders</div>
-  <div class="roster-container">
-    <div class="roster-grid">
-      <div class="card">
-        <img class="card-photo" src="Images/player-def1.jpg" alt="Simphiwe Khumalo" />
-        <div class="card-content">
-          <div class="card-title">Simphiwe Khumalo</div>
-          <div class="card-role">Defender</div>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-photo" src="Images/player-def2.jpg" alt="Abdu Diallo" />
-        <div class="card-content">
-          <div class="card-title">Abdu Diallo</div>
-          <div class="card-role">Defender</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sub-section-title">Midfielders</div>
-  <div class="roster-container">
-    <div class="roster-grid">
-      <div class="card">
-        <img class="card-photo" src="Images/player-mid1.jpg" alt="John Nkosi" />
-        <div class="card-content">
-          <div class="card-title">John Nkosi</div>
-          <div class="card-role">Midfielder</div>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-photo" src="Images/player-mid2.jpg" alt="Phumlani Maseko" />
-        <div class="card-content">
-          <div class="card-title">Phumlani Maseko</div>
-          <div class="card-role">Midfielder</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sub-section-title">Forwards</div>
-  <div class="roster-container">
-    <div class="roster-grid">
-      <div class="card">
-        <img class="card-photo" src="Images/player-fwd1.jpg" alt="Zanele Mbeki" />
-        <div class="card-content">
-          <div class="card-title">Zanele Mbeki</div>
-          <div class="card-role">Forward</div>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-photo" src="Images/player-fwd2.jpg" alt="Jamie Molefe" />
-        <div class="card-content">
-          <div class="card-title">Jamie Molefe</div>
-          <div class="card-role">Forward</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-
- <!-- Footer -->
+  <!-- Footer -->
   <footer class="bg-gray-900 text-white py-12" role="contentinfo">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-4 gap-8">
@@ -371,19 +335,17 @@
           </ul>
         </div>
 
-        <div>
-          <h4 class="font-bold mb-4">Newsletter</h4>
-          <p class="text-gray-400 mb-4">Subscribe to get the latest news and updates.</p>
-          <form class="flex" action="#" method="POST" aria-label="Subscribe to newsletter">
-            <input type="email" name="email" placeholder="Your email" required
-              class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full" />
-            <button type="submit"
-              class="bg-green-700 hover:bg-green-800 px-4 py-2 rounded-r-lg transition duration-300" aria-label="Subscribe">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
+              <!-- Social Media Links replacing Newsletter -->
+      <div>
+        <h4 class="font-bold mb-4">Follow Us</h4>
+        <div class="flex space-x-4">
+          <a href="https://facebook.com/ammarsoccer" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/ammarsa_off" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@Ammarsocceracademy" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
+    </div>
 
       <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Ammar Soccer Academy. All rights reserved.</p>
@@ -428,4 +390,3 @@
 
 </body>
 </html>
-
