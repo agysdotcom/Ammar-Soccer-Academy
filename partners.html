@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cape Town United FC | ABC Motsepe League</title>
+<title>Ammar Soccer Academy | ABC Motsepe League</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
@@ -159,17 +159,34 @@
       grid-template-columns: 1fr;
     }
     */
+  }  /* Social media icons white in footer */
+  footer .social-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
   }
+  footer .social-icon:hover {
+    color: #e4900a;
+  }
+  .hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('Images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
 </style>
 </head>
-<body>
-<header>
+<body class="font-sans bg-gray-50">
 <!-- Navigation -->
 <nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <div class="flex items-center space-x-2">
-      <i class="fas fa-futbol text-2xl"></i>
-      <a href="index.html" class="text-xl font-bold">Ammar Soccer Academy</a>
+      <!-- Club logo instead of ball icon -->
+      <img src="Images/logo.png" alt="Ammar Soccer Academy Logo" class="h-8 w-auto" />
+      <a href="index.html" class="text-xl font-bold">AMMAR SOCCER ACADEMY</a>
     </div>
     <div class="md:hidden">
       <button id="menu-toggle" class="text-white focus:outline-none">
@@ -194,15 +211,8 @@
     <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
   </div>
 </nav>
-    <!-- Hero Section -->
-    <section class="hero flex items-center justify-center text-e4900a">
-        <div class="text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">  Our Partners</h1>
-            <div class="flex justify-center space-x-4">
-            </div>
-        </div>
-    </section>
-<main>
+
+<!-- Partners Section -->
 
   <div class="sponsors-grid" role="list">
     <div class="sponsor-card" tabindex="0" role="listitem" aria-label="K-Electrical sponsor">
@@ -231,7 +241,7 @@
     Interested in sponsoring Ammar Soccer Academy? Contact us today!
   </div>
 </main>
-<!-- Footer -->
+  <!-- Footer -->
   <footer class="bg-gray-900 text-white py-12" role="contentinfo">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-4 gap-8">
@@ -259,19 +269,17 @@
           </ul>
         </div>
 
-        <div>
-          <h4 class="font-bold mb-4">Newsletter</h4>
-          <p class="text-gray-400 mb-4">Subscribe to get the latest news and updates.</p>
-          <form class="flex" action="#" method="POST" aria-label="Subscribe to newsletter">
-            <input type="email" name="email" placeholder="Your email" required
-              class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full" />
-            <button type="submit"
-              class="bg-green-700 hover:bg-green-800 px-4 py-2 rounded-r-lg transition duration-300" aria-label="Subscribe">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
+              <!-- Social Media Links replacing Newsletter -->
+      <div>
+        <h4 class="font-bold mb-4">Follow Us</h4>
+        <div class="flex space-x-4">
+          <a href="https://facebook.com/ammarsoccer" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/ammarsa_off" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@Ammarsocceracademy" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
+    </div>
 
       <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Ammar Soccer Academy. All rights reserved.</p>
