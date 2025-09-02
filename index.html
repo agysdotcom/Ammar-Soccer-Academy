@@ -75,48 +75,7 @@
   background-position: center;
   height: 80vh;
 }
-  /* Lightbox modal styles */
-  .swiper-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    display: none;
-    z-index: 10000;
-    align-items: center;
-    justify-content: center;
-  }
 
-  .swiper-overlay.active {
-    display: flex;
-  }
-
-  .swiper {
-    width: 90vw;
-    height: 80vh;
-  }
-
-  .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: white;
-  }
-
-  .swiper-pagination-bullet {
-    background: white;
-  }
-
-  /* Cursor pointer on gallery images */
-  .gallery-card img {
-    cursor: pointer;
-  }
 </style>
 </head>
 <body class="font-sans bg-gray-50">
@@ -348,23 +307,26 @@
   </div>
 </section>
 
-<!-- Gallery Section -->
+<!-- Preview Gallery Section -->
 <section class="py-16 bg-gray-100">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Gallery</h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryGrid">
-      <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 gallery-card">
-        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.34.31 (1).jpeg" alt="Matchday" class="w-full h-48 object-cover hover:scale-105 transition duration-300" data-index="0" />
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer" onclick="window.location.href='gallery.html'">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.34.31 (1).jpeg" alt="Matchday" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
       </div>
-      <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 gallery-card">
-        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.41.jpeg" alt="Matchday" class="w-full h-48 object-cover hover:scale-105 transition duration-300" data-index="1" />
+      <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer" onclick="window.location.href='gallery.html'">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.41.jpeg" alt="matchday" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
       </div>
-      <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 gallery-card">
-        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.50.jpeg" alt="Matchday" class="w-full h-48 object-cover hover:scale-105 transition duration-300" data-index="2" />
+      <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer" onclick="window.location.href='gallery.html'">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.50.jpeg" alt="matchday" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
       </div>
-      <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 gallery-card">
-        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (3).jpeg" alt="Match Action" class="w-full h-48 object-cover hover:scale-105 transition duration-300" data-index="3" />
+      <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer" onclick="window.location.href='gallery.html'">
+        <img src="Images/Matchday/WhatsApp Image 2025-07-19 at 22.35.54 (3).jpeg" alt="Match action" class="w-full h-48 object-cover hover:scale-105 transition duration-300" />
       </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="galery.html" class="inline-block bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-full transition duration-300">View Full Gallery</a>
     </div>
   </div>
 </section>
@@ -508,20 +470,19 @@
   </footer>
 <script>
 
-<script>
   // Mobile menu toggle
   document.getElementById('menu-toggle').addEventListener('click', function () {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
   });
 
-  // Standings table
   const standings = [
     { pos: 1, team: "Hanover Park FC", played:22, won:15, drawn:5, lost:2, gd:"+45", pts:50 },
     { pos: 2, team: "Santos FC", played:22, won:11, drawn:7, lost:4, gd:"+17", pts:40 },
     { pos: 3, team: "Royal Blues FC", played:22, won:12, drawn:3, lost:7, gd:"+11", pts:39 },
     { pos: 4, team: "Oriented Birds FC", played:22, won:10, drawn:6, lost:6, gd:"+10", pts:36 },
     { pos: 5, team: "Ammar Soccer Academy", played:22, won:10, drawn:4, lost:8, gd:"+5", pts:35 },
-    { pos: 6, team: "Maties FC", played:22, won:9, drawn:5, lost:8, gd:"+7", pts:32 },
+    { pos: 6, team: "Maties Fc", played:22, won:9, drawn:5, lost:8, gd:"+7", pts:32 },
     { pos: 7, team: "Mbekweni Cosmos FC", played:22, won:8, drawn:6, lost:8, gd:"-6", pts:30 },
     { pos: 8, team: "Seaside Spurs FC", played:22, won:8, drawn:5, lost:9, gd:"+1", pts:29 },
     { pos: 9, team: "Barcelona FC", played:22, won:8, drawn:2, lost:12, gd:"-20", pts:26 },
@@ -532,7 +493,13 @@
 
   function createArrowIcon(direction) {
     const i = document.createElement('i');
-    i.className = direction === 'up' ? 'fas fa-arrow-up text-green-500 ml-2' : 'fas fa-arrow-down text-red-500 ml-2';
+    if(direction === 'up') {
+      i.className = 'fas fa-arrow-up arrow-up';
+      i.setAttribute('aria-hidden', 'true');
+    } else if(direction === 'down') {
+      i.className = 'fas fa-arrow-down arrow-down';
+      i.setAttribute('aria-hidden', 'true');
+    }
     return i;
   }
 
@@ -543,32 +510,57 @@
     standings.forEach((team) => {
       const tr = document.createElement('tr');
 
+      // Apply 1st position green text, light green background
+      if(team.pos === 1) {
+        tr.classList.add('standing-1');
+      } 
+      // Relegation rows 11 & 12 in red text and background
+      else if(team.pos === 11) {
+        tr.classList.add('standing-11');
+      } else if(team.pos === 12) {
+        tr.classList.add('standing-12');
+      }
+
+      // Create position cell
       const tdPos = document.createElement('td');
       tdPos.classList.add('py-4', 'px-4', 'font-bold');
       tdPos.textContent = team.pos;
       tr.appendChild(tdPos);
 
+      // Team cell
       const tdTeam = document.createElement('td');
       tdTeam.classList.add('py-4', 'px-4', 'font-bold', 'flex', 'items-center');
-      if (team.team === "Ammar Soccer Academy") tdTeam.style.color = "#e39719";
-      tdTeam.textContent = team.team;
-      if (team.pos === 1) tdTeam.appendChild(createArrowIcon('up'));
-      if (team.pos === 11 || team.pos === 12) tdTeam.appendChild(createArrowIcon('down'));
-      tr.appendChild(tdTeam);
 
-      function td(content) {
-        const cell = document.createElement('td');
-        cell.classList.add('py-4', 'px-4', 'text-center');
-        cell.textContent = content;
-        return cell;
+      // Ammar Soccer Academy always in #e39719 text regardless of position
+      if(team.team === "Ammar Soccer Academy") {
+        tdTeam.style.color = "#e39719";
+      }
+      const spanName = document.createElement('span');
+      spanName.textContent = team.team;
+      tdTeam.appendChild(spanName);
+
+      // Arrows for 1st (up-green) and 11/12 (down-red)
+      if(team.pos === 1) {
+        tdTeam.appendChild(createArrowIcon('up'));
+      } else if(team.pos === 11 || team.pos === 12) {
+        tdTeam.appendChild(createArrowIcon('down'));
       }
 
-      tr.appendChild(td(team.played));
-      tr.appendChild(td(team.won));
-      tr.appendChild(td(team.drawn));
-      tr.appendChild(td(team.lost));
-      tr.appendChild(td(team.gd));
-      tr.appendChild(td(team.pts));
+      tr.appendChild(tdTeam);
+
+      function createCenterCell(content) {
+        const td = document.createElement('td');
+        td.classList.add('py-4', 'px-4', 'text-center');
+        td.textContent = content;
+        return td;
+      }
+
+      tr.appendChild(createCenterCell(team.played));
+      tr.appendChild(createCenterCell(team.won));
+      tr.appendChild(createCenterCell(team.drawn));
+      tr.appendChild(createCenterCell(team.lost));
+      tr.appendChild(createCenterCell(team.gd));
+      tr.appendChild(createCenterCell(team.pts));
 
       tbody.appendChild(tr);
     });
@@ -576,5 +568,35 @@
 
   renderStandings();
 </script>
+<script>
+         // Mobile menu toggle
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
